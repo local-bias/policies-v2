@@ -1,0 +1,49 @@
+:root {
+  --color-primary: #5e90be;
+  --color-dark: #3e6080;
+  --color-light: #649acc;
+}
+
+body {
+  color: #475569;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Yu Gothic Medium', 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+}
+
+body {
+  @apply bg-white;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  transition: color 250ms ease;
+  color: #475569;
+}
+a:hover {
+  color: var(--color-light);
+}
+a:active {
+  color: var(--color-dark);
+}
+
+::selection {
+  background: #1e8cbe77;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  @apply w-1 h-1 md:w-2 md:h-2;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-400 rounded-full;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}

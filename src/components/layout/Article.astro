@@ -1,0 +1,99 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'article'>;
+
+const props = Astro.props;
+---
+
+<article {...props}>
+  <slot />
+</article>
+<style is:global>
+  article {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  article h1 {
+    color: #1e293b;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: 'Yu Gothic';
+    margin: 3.5rem 0 1rem;
+    padding: 1rem 0;
+  }
+  article h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: 'Yu Gothic';
+    margin: 3.5rem 0 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid #475569;
+  }
+  article h3 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    font-family: 'Yu Gothic';
+    margin: 3.5rem 0 1rem;
+    padding-left: 1rem;
+    border-left: 8px solid #334155;
+  }
+  article h4 {
+    color: #1e293b;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    font-family: 'Yu Gothic';
+    margin: 3.5rem 0 1rem;
+  }
+  article p {
+    color: #334155;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  article em {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #94a3b8;
+    text-decoration-thickness: 2px;
+    font-style: normal;
+  }
+  article details {
+    margin-bottom: 3rem;
+  }
+  article table {
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  article table th,
+  article table td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px #0002;
+  }
+  article table th {
+    background-color: #334155;
+    color: #fff;
+    font-weight: 400;
+  }
+  article table td:nth-of-type(2n) {
+    background-color: #f1f5f9;
+  }
+  article pre {
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem /* 32px */;
+    padding: 1rem /* 16px */;
+  }
+  article pre code {
+    font-size: 15px;
+    font-family: Consolas, Monaco, Andale Mono, ui-monospace, SFMono-Regular, 'Noto Sans JP',
+      'Yu Gothic Medium', YuGothic, Ubuntu Mono, monospace;
+  }
+</style>

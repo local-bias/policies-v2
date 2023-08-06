@@ -1,0 +1,10 @@
+---
+import { GTM_ID } from 'src/consts';
+---
+
+<script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
+></script>
+<script
+  type="text/partytown"
+  set:html={`window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments)}gtag('js', new Date());gtag('config', '${GTM_ID}');`}
+/>

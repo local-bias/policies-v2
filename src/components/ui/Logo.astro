@@ -1,0 +1,43 @@
+---
+import { COMPANY_NAME, COMPANY_NAME_RUBY } from 'src/consts';
+---
+
+<div class="logo">
+  <img
+    src="https://assets.konomi.app/img/logo.webp"
+    alt="サイトロゴ"
+    loading="lazy"
+    decoding="async"
+    class="w-14 h-14"
+  />
+  <div>
+    <span class="ruby">{COMPANY_NAME_RUBY}</span>
+    <span class="name">{COMPANY_NAME}</span>
+  </div>
+</div>
+<style>
+  .logo {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 700;
+  }
+  .ruby {
+    font-weight: 100;
+    font-size: 0.625rem;
+    text-align: center;
+  }
+  .name {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .logo > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #5e90be;
+  }
+  img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+</style>

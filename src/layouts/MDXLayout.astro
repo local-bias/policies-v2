@@ -1,0 +1,51 @@
+---
+import 'src/styles/global.css';
+import GoogleTagManager from 'src/components/functional/GoogleTagManager.astro';
+import Article from 'src/components/layout/Article.astro';
+import Body from 'src/components/layout/Body.astro';
+import Nav from 'src/components/layout/Nav/index.astro';
+import Footer from 'src/components/layout/Footer/index.astro';
+import BaseHead from 'src/components/layout/BaseHead.astro';
+interface Props {
+  frontmatter: any;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <BaseHead title={frontmatter.title} description={frontmatter.description} />
+    <GoogleTagManager />
+  </head>
+  <Body>
+    <Nav />
+    <main>
+      <Article>
+        <slot />
+      </Article>
+    </main>
+    <aside></aside>
+    <Footer />
+    <style is:global>
+      html {
+        font-size: 14px;
+      }
+      @media (min-width: 768px) {
+        html {
+          font-size: 16px;
+        }
+      }
+      head {
+        grid-area: nav;
+      }
+      main {
+        grid-area: main;
+      }
+      body > aside {
+        grid-area: sidebar;
+      }
+    </style>
+  </Body>
+</html>

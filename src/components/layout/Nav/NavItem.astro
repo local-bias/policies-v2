@@ -1,0 +1,18 @@
+---
+type Props = { title: string; href: string; subtitle?: string };
+---
+
+<a
+  href={Astro.props.href}
+  target="_brank"
+  rel="noreferrer"
+  class="group relative flex items-center gap-6 transition-all py-3 rounded"
+>
+  <slot />
+  <div class="flex flex-col">
+    <div class="text-sm">{Astro.props.title}</div>
+    <small class="text-[10px] text-slate-400">{Astro.props.subtitle}</small>
+  </div>
+  <div class="absolute bottom-0 left-0 w-0 group-hover:w-full h-[1px] transition-all bg-cyan-600">
+  </div>
+</a>

@@ -1,0 +1,19 @@
+---
+import NavItem from './NavItem.astro';
+import Logo from 'src/components/ui/Logo.astro';
+
+---
+
+<header class="hidden lg:block text-slate-800">
+  <div class="sticky top-0 h-screen px-4 py-16 flex flex-col gap-8">
+    <div><a href="/"><Logo /></a></div>
+    <div class="pl-4"><a href="/privacy">プライバシーポリシー</a></div>
+    <div class="pl-4"><a href="/terms">利用規約</a></div>
+  </div>
+</header>
+<style>
+  header {
+    grid-area: nav;
+    background-color: #fff;
+  }
+</style>
