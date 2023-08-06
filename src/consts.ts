@@ -3,6 +3,11 @@ export const COMPANY_NAME_RUBY = 'コノミドットアップ';
 
 export const GTM_ID = 'GTM-5GMGTT9';
 
+export const TWITTER_NAME = '@lbRibbit';
+export const GITHUB_NAME = 'local-bias';
+export const ZENN_NAME = 'ribbit';
+export const QIITA_NAME = 'ribbit';
+
 export const FOOTER_ITEMS = {
   Products: [
     { title: 'kintoneプラグイン', href: 'https://products.konomi.app' },
