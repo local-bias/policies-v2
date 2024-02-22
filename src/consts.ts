@@ -1,5 +1,4 @@
-export const COMPANY_NAME = 'konomi.app';
-export const COMPANY_NAME_RUBY = 'コノミドットアップ';
+export const COMPANY_NAME = 'Ribbit App Development';
 
 export const GTM_ID = 'GTM-5GMGTT9';
 
